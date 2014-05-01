@@ -7,6 +7,7 @@
 //
 
 #import "ParallaxPhotoCell.h"
+#import "ParallaxPhotoCellLayoutAttributes.h"
 
 @implementation ParallaxPhotoCell
 
@@ -27,6 +28,15 @@
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_imageView]|" options:0 metrics:nil views:views]];
     
     return self;
+}
+
+- (void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
+{
+    NSParameterAssert(layoutAttributes != nil);
+    NSParameterAssert([layoutAttributes isKindOfClass:[ParallaxPhotoCellLayoutAttributes class]]);
+    
+    ParallaxPhotoCellLayoutAttributes *parallaxLayoutAttributes = (ParallaxPhotoCellLayoutAttributes *)layoutAttributes;
+    NSLog(@"Offset: %@", NSStringFromCGPoint(parallaxLayoutAttributes.offsetFromCenter));
 }
 
 @end

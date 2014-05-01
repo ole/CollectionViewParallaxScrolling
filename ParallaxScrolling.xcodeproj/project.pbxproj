@@ -50,6 +50,7 @@
 		5DE3583219128E87005CD2F2 /* 25-winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DE3581719128E87005CD2F2 /* 25-winter.jpg */; };
 		5DE3583319128E87005CD2F2 /* 26-tree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DE3581819128E87005CD2F2 /* 26-tree.jpg */; };
 		5DE3583419128E87005CD2F2 /* 27-beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DE3581919128E87005CD2F2 /* 27-beach.jpg */; };
+		5DE358371912943E005CD2F2 /* ParallaxPhotoCellLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE358361912943E005CD2F2 /* ParallaxPhotoCellLayoutAttributes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,8 @@
 		5DE3581719128E87005CD2F2 /* 25-winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "25-winter.jpg"; sourceTree = "<group>"; };
 		5DE3581819128E87005CD2F2 /* 26-tree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "26-tree.jpg"; sourceTree = "<group>"; };
 		5DE3581919128E87005CD2F2 /* 27-beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "27-beach.jpg"; sourceTree = "<group>"; };
+		5DE358351912943E005CD2F2 /* ParallaxPhotoCellLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxPhotoCellLayoutAttributes.h; sourceTree = "<group>"; };
+		5DE358361912943E005CD2F2 /* ParallaxPhotoCellLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxPhotoCellLayoutAttributes.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 				5DE357F8191284B2005CD2F2 /* ParallaxLayout.m */,
 				5DE357FA191284CF005CD2F2 /* ParallaxPhotoCell.h */,
 				5DE357FB191284CF005CD2F2 /* ParallaxPhotoCell.m */,
+				5DE358351912943E005CD2F2 /* ParallaxPhotoCellLayoutAttributes.h */,
+				5DE358361912943E005CD2F2 /* ParallaxPhotoCellLayoutAttributes.m */,
 				5DE357D71912843E005CD2F2 /* Images.xcassets */,
 				5DE357CC1912843E005CD2F2 /* Supporting Files */,
 				5DE357FD19128D29005CD2F2 /* Photos.plist */,
@@ -366,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DE358371912943E005CD2F2 /* ParallaxPhotoCellLayoutAttributes.m in Sources */,
 				5DE357D61912843E005CD2F2 /* AppDelegate.m in Sources */,
 				5DE357F6191284A3005CD2F2 /* PhotosCollectionViewController.m in Sources */,
 				5DE357F9191284B2005CD2F2 /* ParallaxLayout.m in Sources */,

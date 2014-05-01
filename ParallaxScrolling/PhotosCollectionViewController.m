@@ -10,15 +10,26 @@
 #import "ParallaxLayout.h"
 #import "ParallaxPhotoCell.h"
 
+@interface PhotosCollectionViewController ()
+
+@property (nonatomic, copy) NSArray *photoFilenames;
+
+@end
+
+
 @implementation PhotosCollectionViewController
 
 - (id)init
 {
     ParallaxLayout *layout = [[ParallaxLayout alloc] init];
     self = [super initWithCollectionViewLayout:layout];
+    
     if (self == nil) {
         return nil;
     }
+    
+    NSDictionary *photosDict = [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Photos" withExtension:@"plist"]];
+    self.photoFilenames = photosDict[@"photos"];
     
     return self;
 }
@@ -43,12 +54,17 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return [self.photoFilenames count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ParallaxPhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
+    
+    NSString *photoFilename = self.photoFilenames[indexPath.item];
+    UIImage *photo = [UIImage imageNamed:photoFilename];
+    cell.imageView.image = photo;
+    
     return cell;
 }
 

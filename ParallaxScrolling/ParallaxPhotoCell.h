@@ -10,4 +10,6 @@
 
 @interface ParallaxPhotoCell : UICollectionViewCell
 
+@property (nonatomic, strong, readonly) UIImageView *imageView;
+
 @end

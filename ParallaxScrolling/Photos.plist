@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>photos</key>
+	<array>
+		<string>01-mallorca.jpg</string>
+		<string>02-fishing.jpg</string>
+		<string>03-chili.jpg</string>
+		<string>04-rice.jpg</string>
+		<string>05-sweden.jpg</string>
+		<string>06-magicforest.jpg</string>
+		<string>07-bird.jpg</string>
+		<string>08-iguana.jpg</string>
+		<string>09-valley.jpg</string>
+		<string>10-parrots.jpg</string>
+		<string>11-lapaz.jpg</string>
+		<string>12-villarrica.jpg</string>
+		<string>13-lakevolcano.jpg</string>
+		<string>14-denseforest.jpg</string>
+		<string>15-glacier1.jpg</string>
+		<string>16-glacier2.jpg</string>
+		<string>17-torresdelpaine1.jpg</string>
+		<string>18-torresdelpaine2.jpg</string>
+		<string>19-cat.jpg</string>
+		<string>20-berlinskyline.jpg</string>
+		<string>21-potsdamerplatz.jpg</string>
+		<string>22-milchbar.jpg</string>
+		<string>23-berlinlights.jpg</string>
+		<string>24-tvtower.jpg</string>
+		<string>25-winter.jpg</string>
+		<string>26-tree.jpg</string>
+		<string>27-beach.jpg</string>
+	</array>
+</dict>
+</plist>

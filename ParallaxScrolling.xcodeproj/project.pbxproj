@@ -22,7 +22,6 @@
 		5DE357F6191284A3005CD2F2 /* PhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357F5191284A3005CD2F2 /* PhotosCollectionViewController.m */; };
 		5DE357F9191284B2005CD2F2 /* ParallaxLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357F8191284B2005CD2F2 /* ParallaxLayout.m */; };
 		5DE357FC191284D0005CD2F2 /* ParallaxPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357FB191284CF005CD2F2 /* ParallaxPhotoCell.m */; };
-		5DE357FE19128D29005CD2F2 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DE357FD19128D29005CD2F2 /* Photos.plist */; };
 		5DE3581A19128E87005CD2F2 /* 01-mallorca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DE357FF19128E87005CD2F2 /* 01-mallorca.jpg */; };
 		5DE3581B19128E87005CD2F2 /* 02-fishing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DE3580019128E87005CD2F2 /* 02-fishing.jpg */; };
 		5DE3581C19128E87005CD2F2 /* 03-chili.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DE3580119128E87005CD2F2 /* 03-chili.jpg */; };
@@ -51,6 +50,7 @@
 		5DE3583319128E87005CD2F2 /* 26-tree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DE3581819128E87005CD2F2 /* 26-tree.jpg */; };
 		5DE3583419128E87005CD2F2 /* 27-beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DE3581919128E87005CD2F2 /* 27-beach.jpg */; };
 		5DE358371912943E005CD2F2 /* ParallaxPhotoCellLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE358361912943E005CD2F2 /* ParallaxPhotoCellLayoutAttributes.m */; };
+		5DE3583919129913005CD2F2 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DE3583819129913005CD2F2 /* Photos.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +86,6 @@
 		5DE357F8191284B2005CD2F2 /* ParallaxLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxLayout.m; sourceTree = "<group>"; };
 		5DE357FA191284CF005CD2F2 /* ParallaxPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxPhotoCell.h; sourceTree = "<group>"; };
 		5DE357FB191284CF005CD2F2 /* ParallaxPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxPhotoCell.m; sourceTree = "<group>"; };
-		5DE357FD19128D29005CD2F2 /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
 		5DE357FF19128E87005CD2F2 /* 01-mallorca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "01-mallorca.jpg"; sourceTree = "<group>"; };
 		5DE3580019128E87005CD2F2 /* 02-fishing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "02-fishing.jpg"; sourceTree = "<group>"; };
 		5DE3580119128E87005CD2F2 /* 03-chili.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "03-chili.jpg"; sourceTree = "<group>"; };
@@ -116,6 +115,7 @@
 		5DE3581919128E87005CD2F2 /* 27-beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "27-beach.jpg"; sourceTree = "<group>"; };
 		5DE358351912943E005CD2F2 /* ParallaxPhotoCellLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxPhotoCellLayoutAttributes.h; sourceTree = "<group>"; };
 		5DE358361912943E005CD2F2 /* ParallaxPhotoCellLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxPhotoCellLayoutAttributes.m; sourceTree = "<group>"; };
+		5DE3583819129913005CD2F2 /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Photos.plist; path = ParallaxScrolling/Photos/Photos.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,34 +187,7 @@
 				5DE358361912943E005CD2F2 /* ParallaxPhotoCellLayoutAttributes.m */,
 				5DE357D71912843E005CD2F2 /* Images.xcassets */,
 				5DE357CC1912843E005CD2F2 /* Supporting Files */,
-				5DE357FD19128D29005CD2F2 /* Photos.plist */,
-				5DE357FF19128E87005CD2F2 /* 01-mallorca.jpg */,
-				5DE3580019128E87005CD2F2 /* 02-fishing.jpg */,
-				5DE3580119128E87005CD2F2 /* 03-chili.jpg */,
-				5DE3580219128E87005CD2F2 /* 04-rice.jpg */,
-				5DE3580319128E87005CD2F2 /* 05-sweden.jpg */,
-				5DE3580419128E87005CD2F2 /* 06-magicforest.jpg */,
-				5DE3580519128E87005CD2F2 /* 07-bird.jpg */,
-				5DE3580619128E87005CD2F2 /* 08-iguana.jpg */,
-				5DE3580719128E87005CD2F2 /* 09-valley.jpg */,
-				5DE3580819128E87005CD2F2 /* 10-parrots.jpg */,
-				5DE3580919128E87005CD2F2 /* 11-lapaz.jpg */,
-				5DE3580A19128E87005CD2F2 /* 12-villarrica.jpg */,
-				5DE3580B19128E87005CD2F2 /* 13-lakevolcano.jpg */,
-				5DE3580C19128E87005CD2F2 /* 14-denseforest.jpg */,
-				5DE3580D19128E87005CD2F2 /* 15-glacier1.jpg */,
-				5DE3580E19128E87005CD2F2 /* 16-glacier2.jpg */,
-				5DE3580F19128E87005CD2F2 /* 17-torresdelpaine1.jpg */,
-				5DE3581019128E87005CD2F2 /* 18-torresdelpaine2.jpg */,
-				5DE3581119128E87005CD2F2 /* 19-cat.jpg */,
-				5DE3581219128E87005CD2F2 /* 20-berlinskyline.jpg */,
-				5DE3581319128E87005CD2F2 /* 21-potsdamerplatz.jpg */,
-				5DE3581419128E87005CD2F2 /* 22-milchbar.jpg */,
-				5DE3581519128E87005CD2F2 /* 23-berlinlights.jpg */,
-				5DE3581619128E87005CD2F2 /* 24-tvtower.jpg */,
-				5DE3581719128E87005CD2F2 /* 25-winter.jpg */,
-				5DE3581819128E87005CD2F2 /* 26-tree.jpg */,
-				5DE3581919128E87005CD2F2 /* 27-beach.jpg */,
+				5DE3583A19129944005CD2F2 /* Photos */,
 			);
 			path = ParallaxScrolling;
 			sourceTree = "<group>";
@@ -246,6 +219,41 @@
 				5DE357E71912843E005CD2F2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5DE3583A19129944005CD2F2 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				5DE3583819129913005CD2F2 /* Photos.plist */,
+				5DE357FF19128E87005CD2F2 /* 01-mallorca.jpg */,
+				5DE3580019128E87005CD2F2 /* 02-fishing.jpg */,
+				5DE3580119128E87005CD2F2 /* 03-chili.jpg */,
+				5DE3580219128E87005CD2F2 /* 04-rice.jpg */,
+				5DE3580319128E87005CD2F2 /* 05-sweden.jpg */,
+				5DE3580419128E87005CD2F2 /* 06-magicforest.jpg */,
+				5DE3580519128E87005CD2F2 /* 07-bird.jpg */,
+				5DE3580619128E87005CD2F2 /* 08-iguana.jpg */,
+				5DE3580719128E87005CD2F2 /* 09-valley.jpg */,
+				5DE3580819128E87005CD2F2 /* 10-parrots.jpg */,
+				5DE3580919128E87005CD2F2 /* 11-lapaz.jpg */,
+				5DE3580A19128E87005CD2F2 /* 12-villarrica.jpg */,
+				5DE3580B19128E87005CD2F2 /* 13-lakevolcano.jpg */,
+				5DE3580C19128E87005CD2F2 /* 14-denseforest.jpg */,
+				5DE3580D19128E87005CD2F2 /* 15-glacier1.jpg */,
+				5DE3580E19128E87005CD2F2 /* 16-glacier2.jpg */,
+				5DE3580F19128E87005CD2F2 /* 17-torresdelpaine1.jpg */,
+				5DE3581019128E87005CD2F2 /* 18-torresdelpaine2.jpg */,
+				5DE3581119128E87005CD2F2 /* 19-cat.jpg */,
+				5DE3581219128E87005CD2F2 /* 20-berlinskyline.jpg */,
+				5DE3581319128E87005CD2F2 /* 21-potsdamerplatz.jpg */,
+				5DE3581419128E87005CD2F2 /* 22-milchbar.jpg */,
+				5DE3581519128E87005CD2F2 /* 23-berlinlights.jpg */,
+				5DE3581619128E87005CD2F2 /* 24-tvtower.jpg */,
+				5DE3581719128E87005CD2F2 /* 25-winter.jpg */,
+				5DE3581819128E87005CD2F2 /* 26-tree.jpg */,
+				5DE3581919128E87005CD2F2 /* 27-beach.jpg */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,7 +342,6 @@
 				5DE357D81912843E005CD2F2 /* Images.xcassets in Resources */,
 				5DE3583119128E87005CD2F2 /* 24-tvtower.jpg in Resources */,
 				5DE3582419128E87005CD2F2 /* 11-lapaz.jpg in Resources */,
-				5DE357FE19128D29005CD2F2 /* Photos.plist in Resources */,
 				5DE3582B19128E87005CD2F2 /* 18-torresdelpaine2.jpg in Resources */,
 				5DE3582F19128E87005CD2F2 /* 22-milchbar.jpg in Resources */,
 				5DE3582C19128E87005CD2F2 /* 19-cat.jpg in Resources */,
@@ -353,6 +360,7 @@
 				5DE3581B19128E87005CD2F2 /* 02-fishing.jpg in Resources */,
 				5DE3582E19128E87005CD2F2 /* 21-potsdamerplatz.jpg in Resources */,
 				5DE3582519128E87005CD2F2 /* 12-villarrica.jpg in Resources */,
+				5DE3583919129913005CD2F2 /* Photos.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

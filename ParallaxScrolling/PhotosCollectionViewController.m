@@ -12,7 +12,7 @@
 
 @interface PhotosCollectionViewController ()
 
-@property (nonatomic, copy) NSArray *photoFilenames;
+@property (nonatomic, copy) NSArray *photos;
 
 @end
 
@@ -32,7 +32,7 @@
     
     self.title = @"Photos";
     NSDictionary *photosDict = [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Photos" withExtension:@"plist"]];
-    self.photoFilenames = photosDict[@"photos"];
+    self.photos = photosDict[@"photos"];
     
     return self;
 }
@@ -57,18 +57,30 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.photoFilenames count];
+    return [self.photos count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ParallaxPhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
     
-    NSString *photoFilename = self.photoFilenames[indexPath.item];
+    NSString *photoFilename = self.photos[indexPath.item][@"filename"];
     UIImage *photo = [UIImage imageNamed:photoFilename];
     cell.imageView.image = photo;
     
     return cell;
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat imageWidth = [self.photos[indexPath.item][@"width"] floatValue];
+    CGFloat imageHeight = [self.photos[indexPath.item][@"height"] floatValue];
+    
+    CGFloat cellWidth = CGRectGetWidth(self.collectionView.bounds);
+    CGFloat cellHeight = floor(cellWidth / imageWidth * imageHeight);
+    return CGSizeMake(cellWidth, cellHeight);
 }
 
 @end

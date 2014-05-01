@@ -22,12 +22,15 @@
 - (id)init
 {
     ParallaxLayout *layout = [[ParallaxLayout alloc] init];
+    layout.itemSize = CGSizeMake(320, 240);
+    layout.minimumLineSpacing = 40;
     self = [super initWithCollectionViewLayout:layout];
     
     if (self == nil) {
         return nil;
     }
     
+    self.title = @"Photos";
     NSDictionary *photosDict = [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Photos" withExtension:@"plist"]];
     self.photoFilenames = photosDict[@"photos"];
     

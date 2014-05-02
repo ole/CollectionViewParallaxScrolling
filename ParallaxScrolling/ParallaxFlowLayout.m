@@ -18,6 +18,11 @@ const CGFloat MaxParallaxOffset = 30.0;
     return [ParallaxLayoutAttributes class];
 }
 
+- (CGFloat)maxParallaxOffset
+{
+    return MaxParallaxOffset;
+}
+
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
 {
     return YES;
@@ -37,11 +42,6 @@ const CGFloat MaxParallaxOffset = 30.0;
     ParallaxLayoutAttributes *layoutAttributes = (ParallaxLayoutAttributes *)[super layoutAttributesForItemAtIndexPath:indexPath];
     layoutAttributes.parallaxOffset = [self parallaxOffsetForLayoutAttributes:layoutAttributes];
     return layoutAttributes;
-}
-
-- (CGFloat)maxParallaxOffset
-{
-    return MaxParallaxOffset;
 }
 
 - (CGPoint)parallaxOffsetForLayoutAttributes:(ParallaxLayoutAttributes *)layoutAttributes

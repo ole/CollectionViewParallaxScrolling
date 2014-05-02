@@ -14,14 +14,14 @@
 {
     ParallaxPhotoCellLayoutAttributes *copy = [super copyWithZone:zone];
     NSAssert([copy isKindOfClass:[self class]], @"copy must have the same class");
-    copy.offsetFromCenter = self.offsetFromCenter;
+    copy.parallaxOffset = self.parallaxOffset;
     return copy;
 }
 
 - (BOOL)isEqual:(id)object
 {
     ParallaxPhotoCellLayoutAttributes *otherObject = object;
-    if (!CGPointEqualToPoint(self.offsetFromCenter, otherObject.offsetFromCenter)) {
+    if (!CGPointEqualToPoint(self.parallaxOffset, otherObject.parallaxOffset)) {
         return NO;
     }
     return [super isEqual:otherObject];

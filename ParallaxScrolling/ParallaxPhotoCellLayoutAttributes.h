@@ -10,6 +10,6 @@
 
 @interface ParallaxPhotoCellLayoutAttributes : UICollectionViewLayoutAttributes
 
-@property (nonatomic) CGPoint offsetFromCenter;
+@property (nonatomic) CGPoint parallaxOffset;
 
 @end

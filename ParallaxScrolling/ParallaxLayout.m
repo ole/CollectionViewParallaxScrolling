@@ -9,7 +9,7 @@
 #import "ParallaxLayout.h"
 #import "ParallaxPhotoCellLayoutAttributes.h"
 
-const CGFloat MaxParallaxOffset = 20.0;
+const CGFloat MaxParallaxOffset = 30.0;
 
 @implementation ParallaxLayout
 
@@ -27,7 +27,7 @@ const CGFloat MaxParallaxOffset = 20.0;
 {
     NSArray *layoutAttributesArray = [super layoutAttributesForElementsInRect:rect];
     for (ParallaxPhotoCellLayoutAttributes *layoutAttributes in layoutAttributesArray) {
-        layoutAttributes.offsetFromCenter = [self centerOffsetForLayoutAttributes:layoutAttributes];
+        layoutAttributes.parallaxOffset = [self parallaxOffsetForLayoutAttributes:layoutAttributes];
     }
     return layoutAttributesArray;
 }
@@ -35,7 +35,7 @@ const CGFloat MaxParallaxOffset = 20.0;
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ParallaxPhotoCellLayoutAttributes *layoutAttributes = (ParallaxPhotoCellLayoutAttributes *)[super layoutAttributesForItemAtIndexPath:indexPath];
-    layoutAttributes.offsetFromCenter = [self centerOffsetForLayoutAttributes:layoutAttributes];
+    layoutAttributes.parallaxOffset = [self parallaxOffsetForLayoutAttributes:layoutAttributes];
     return layoutAttributes;
 }
 
@@ -44,7 +44,7 @@ const CGFloat MaxParallaxOffset = 20.0;
     return MaxParallaxOffset;
 }
 
-- (CGPoint)centerOffsetForLayoutAttributes:(ParallaxPhotoCellLayoutAttributes *)layoutAttributes
+- (CGPoint)parallaxOffsetForLayoutAttributes:(ParallaxPhotoCellLayoutAttributes *)layoutAttributes
 {
     NSParameterAssert(layoutAttributes != nil);
     NSParameterAssert([layoutAttributes isKindOfClass:[ParallaxPhotoCellLayoutAttributes class]]);
@@ -53,7 +53,14 @@ const CGFloat MaxParallaxOffset = 20.0;
     CGPoint boundsCenter = CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds));
     CGPoint cellCenter = layoutAttributes.center;
     CGPoint offsetFromCenter = CGPointMake(boundsCenter.x - cellCenter.x, boundsCenter.y - cellCenter.y);
-    return offsetFromCenter;
+    
+    CGSize cellSize = layoutAttributes.size;
+    CGFloat maxVerticalOffsetWhereCellIsStillVisible = (bounds.size.height / 2) + (cellSize.height / 2);
+    CGFloat scaleFactor = self.maxParallaxOffset / maxVerticalOffsetWhereCellIsStillVisible;
+    
+    CGPoint parallaxOffset = CGPointMake(0.0, offsetFromCenter.y * scaleFactor);
+    
+    return parallaxOffset;
 }
 
 @end

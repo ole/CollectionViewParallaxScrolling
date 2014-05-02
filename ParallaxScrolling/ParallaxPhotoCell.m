@@ -25,8 +25,11 @@
     if (self == nil) {
         return nil;
     }
-    
+
+    self.clipsToBounds = YES;
+
     [self setupImageView];
+    [self setupConstraints];
     [self setNeedsUpdateConstraints];
     
     return self;
@@ -71,18 +74,13 @@
 
 - (void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
 {
+    [super applyLayoutAttributes:layoutAttributes];
+    
     NSParameterAssert(layoutAttributes != nil);
     NSParameterAssert([layoutAttributes isKindOfClass:[ParallaxPhotoCellLayoutAttributes class]]);
 
     ParallaxPhotoCellLayoutAttributes *parallaxLayoutAttributes = (ParallaxPhotoCellLayoutAttributes *)layoutAttributes;
-    CGFloat parallaxOffset = [self parallaxOffsetForLayoutAttributes:parallaxLayoutAttributes];
-    self.imageViewCenterYConstraint.constant = parallaxOffset;
-}
-
-- (CGFloat)parallaxOffsetForLayoutAttributes:(ParallaxPhotoCellLayoutAttributes *)layoutAttributes
-{
-    CGFloat parallaxOffset = layoutAttributes.offsetFromCenter.y / 10;
-    return parallaxOffset;
+    self.imageViewCenterYConstraint.constant = parallaxLayoutAttributes.parallaxOffset.y;
 }
 
 @end

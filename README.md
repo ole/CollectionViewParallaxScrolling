@@ -12,6 +12,8 @@ Please read [the accompanying blog post](http://oleb.net/blog/2014/04/parallax-s
   <source src="http://oleb.net/media/parallax-scrolling-640x1136.m4v" type="video/mp4" />
 </video>
 
+[Download the demo video (H.264)](http://oleb.net/media/parallax-scrolling-640x1136.m4v)
+
 ## Photos
 
 All photos used in the demo app by Ole Begemann. Check out my [Flickr account](https://www.flickr.com/photos/ole/) for more.

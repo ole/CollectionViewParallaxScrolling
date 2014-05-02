@@ -7,7 +7,7 @@
 //
 
 #import "ParallaxPhotoCell.h"
-#import "ParallaxPhotoCellLayoutAttributes.h"
+#import "ParallaxLayoutAttributes.h"
 
 @interface ParallaxPhotoCell ()
 
@@ -76,9 +76,9 @@
     [super applyLayoutAttributes:layoutAttributes];
     
     NSParameterAssert(layoutAttributes != nil);
-    NSParameterAssert([layoutAttributes isKindOfClass:[ParallaxPhotoCellLayoutAttributes class]]);
+    NSParameterAssert([layoutAttributes isKindOfClass:[ParallaxLayoutAttributes class]]);
 
-    ParallaxPhotoCellLayoutAttributes *parallaxLayoutAttributes = (ParallaxPhotoCellLayoutAttributes *)layoutAttributes;
+    ParallaxLayoutAttributes *parallaxLayoutAttributes = (ParallaxLayoutAttributes *)layoutAttributes;
     self.imageViewCenterYConstraint.constant = parallaxLayoutAttributes.parallaxOffset.y;
 }
 

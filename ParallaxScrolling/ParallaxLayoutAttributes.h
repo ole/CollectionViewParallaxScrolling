@@ -1,5 +1,5 @@
 //
-//  ParallaxPhotoCellLayoutAttributes.h
+//  ParallaxLayoutAttributes.h
 //  ParallaxScrolling
 //
 //  Created by Ole Begemann on 01.05.14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ParallaxPhotoCellLayoutAttributes : UICollectionViewLayoutAttributes
+@interface ParallaxLayoutAttributes : UICollectionViewLayoutAttributes
 
 @property (nonatomic) CGPoint parallaxOffset;
 

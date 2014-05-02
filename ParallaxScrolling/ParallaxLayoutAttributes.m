@@ -1,18 +1,18 @@
 //
-//  ParallaxPhotoCellLayoutAttributes.m
+//  ParallaxLayoutAttributes.m
 //  ParallaxScrolling
 //
 //  Created by Ole Begemann on 01.05.14.
 //  Copyright (c) 2014 Ole Begemann. All rights reserved.
 //
 
-#import "ParallaxPhotoCellLayoutAttributes.h"
+#import "ParallaxLayoutAttributes.h"
 
-@implementation ParallaxPhotoCellLayoutAttributes
+@implementation ParallaxLayoutAttributes
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    ParallaxPhotoCellLayoutAttributes *copy = [super copyWithZone:zone];
+    ParallaxLayoutAttributes *copy = [super copyWithZone:zone];
     NSAssert([copy isKindOfClass:[self class]], @"copy must have the same class");
     copy.parallaxOffset = self.parallaxOffset;
     return copy;
@@ -20,7 +20,7 @@
 
 - (BOOL)isEqual:(id)object
 {
-    ParallaxPhotoCellLayoutAttributes *otherObject = object;
+    ParallaxLayoutAttributes *otherObject = object;
     if (!CGPointEqualToPoint(self.parallaxOffset, otherObject.parallaxOffset)) {
         return NO;
     }

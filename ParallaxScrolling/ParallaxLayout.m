@@ -7,7 +7,7 @@
 //
 
 #import "ParallaxLayout.h"
-#import "ParallaxPhotoCellLayoutAttributes.h"
+#import "ParallaxLayoutAttributes.h"
 
 const CGFloat MaxParallaxOffset = 30.0;
 
@@ -15,7 +15,7 @@ const CGFloat MaxParallaxOffset = 30.0;
 
 + (Class)layoutAttributesClass
 {
-    return [ParallaxPhotoCellLayoutAttributes class];
+    return [ParallaxLayoutAttributes class];
 }
 
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
@@ -26,7 +26,7 @@ const CGFloat MaxParallaxOffset = 30.0;
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
 {
     NSArray *layoutAttributesArray = [super layoutAttributesForElementsInRect:rect];
-    for (ParallaxPhotoCellLayoutAttributes *layoutAttributes in layoutAttributesArray) {
+    for (ParallaxLayoutAttributes *layoutAttributes in layoutAttributesArray) {
         layoutAttributes.parallaxOffset = [self parallaxOffsetForLayoutAttributes:layoutAttributes];
     }
     return layoutAttributesArray;
@@ -34,7 +34,7 @@ const CGFloat MaxParallaxOffset = 30.0;
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ParallaxPhotoCellLayoutAttributes *layoutAttributes = (ParallaxPhotoCellLayoutAttributes *)[super layoutAttributesForItemAtIndexPath:indexPath];
+    ParallaxLayoutAttributes *layoutAttributes = (ParallaxLayoutAttributes *)[super layoutAttributesForItemAtIndexPath:indexPath];
     layoutAttributes.parallaxOffset = [self parallaxOffsetForLayoutAttributes:layoutAttributes];
     return layoutAttributes;
 }
@@ -44,10 +44,10 @@ const CGFloat MaxParallaxOffset = 30.0;
     return MaxParallaxOffset;
 }
 
-- (CGPoint)parallaxOffsetForLayoutAttributes:(ParallaxPhotoCellLayoutAttributes *)layoutAttributes
+- (CGPoint)parallaxOffsetForLayoutAttributes:(ParallaxLayoutAttributes *)layoutAttributes
 {
     NSParameterAssert(layoutAttributes != nil);
-    NSParameterAssert([layoutAttributes isKindOfClass:[ParallaxPhotoCellLayoutAttributes class]]);
+    NSParameterAssert([layoutAttributes isKindOfClass:[ParallaxLayoutAttributes class]]);
     
     CGRect bounds = self.collectionView.bounds;
     CGPoint boundsCenter = CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds));

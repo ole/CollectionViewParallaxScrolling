@@ -22,7 +22,6 @@
 - (id)init
 {
     ParallaxLayout *layout = [[ParallaxLayout alloc] init];
-    layout.itemSize = CGSizeMake(320, 240);
     layout.minimumLineSpacing = 40;
     self = [super initWithCollectionViewLayout:layout];
     
@@ -64,9 +63,15 @@
 {
     ParallaxPhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
     
-    NSString *photoFilename = self.photos[indexPath.item][@"filename"];
-    UIImage *photo = [UIImage imageNamed:photoFilename];
-    cell.imageView.image = photo;
+    NSDictionary *photo = self.photos[indexPath.item];
+    NSString *photoFilename = photo[@"filename"];
+    UIImage *image = [UIImage imageNamed:photoFilename];
+    cell.imageView.image = image;
+
+    // Pass the maximum parallax offset to the cell.
+    // The cell needs this information to configure the constraints for its image view.
+    ParallaxLayout *layout = (ParallaxLayout *)self.collectionViewLayout;
+    cell.maxParallaxOffset = layout.maxParallaxOffset;
     
     return cell;
 }
@@ -75,11 +80,15 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat imageWidth = [self.photos[indexPath.item][@"width"] floatValue];
-    CGFloat imageHeight = [self.photos[indexPath.item][@"height"] floatValue];
+    NSDictionary *photo = self.photos[indexPath.item];
+    CGFloat imageWidth = [photo[@"width"] floatValue];
+    CGFloat imageHeight = [photo[@"height"] floatValue];
     
+    // Compute cell size according to image aspect ratio.
+    // Cell height must take maximum possible parallax offset into account.
+    ParallaxLayout *layout = (ParallaxLayout *)self.collectionViewLayout;
     CGFloat cellWidth = CGRectGetWidth(self.collectionView.bounds);
-    CGFloat cellHeight = floor(cellWidth / imageWidth * imageHeight);
+    CGFloat cellHeight = floor(cellWidth / imageWidth * imageHeight) - (2 * layout.maxParallaxOffset);
     return CGSizeMake(cellWidth, cellHeight);
 }
 

@@ -9,6 +9,8 @@
 #import "ParallaxLayout.h"
 #import "ParallaxPhotoCellLayoutAttributes.h"
 
+const CGFloat MaxParallaxOffset = 20.0;
+
 @implementation ParallaxLayout
 
 + (Class)layoutAttributesClass
@@ -35,6 +37,11 @@
     ParallaxPhotoCellLayoutAttributes *layoutAttributes = (ParallaxPhotoCellLayoutAttributes *)[super layoutAttributesForItemAtIndexPath:indexPath];
     layoutAttributes.offsetFromCenter = [self centerOffsetForLayoutAttributes:layoutAttributes];
     return layoutAttributes;
+}
+
+- (CGFloat)maxParallaxOffset
+{
+    return MaxParallaxOffset;
 }
 
 - (CGPoint)centerOffsetForLayoutAttributes:(ParallaxPhotoCellLayoutAttributes *)layoutAttributes

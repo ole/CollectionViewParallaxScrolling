@@ -10,4 +10,6 @@
 
 @interface ParallaxLayout : UICollectionViewFlowLayout
 
+@property (nonatomic, readonly) CGFloat maxParallaxOffset;
+
 @end

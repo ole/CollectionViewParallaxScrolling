@@ -11,5 +11,6 @@
 @interface ParallaxPhotoCell : UICollectionViewCell
 
 @property (nonatomic, strong, readonly) UIImageView *imageView;
+@property (nonatomic) CGFloat maxParallaxOffset;
 
 @end

@@ -27,6 +27,7 @@
     }
 
     self.clipsToBounds = YES;
+    self.layer.cornerRadius = 10;
 
     [self setupImageView];
     [self setupConstraints];

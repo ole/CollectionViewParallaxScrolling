@@ -10,7 +10,7 @@
 #import "ParallaxLayout.h"
 #import "ParallaxPhotoCell.h"
 
-@interface PhotosCollectionViewController ()
+@interface PhotosCollectionViewController () <UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, copy) NSArray *photos;
 

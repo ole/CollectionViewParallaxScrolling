@@ -22,7 +22,9 @@
 - (id)init
 {
     ParallaxLayout *layout = [[ParallaxLayout alloc] init];
-    layout.minimumLineSpacing = 40;
+    layout.minimumLineSpacing = 16;
+    layout.sectionInset = UIEdgeInsetsMake(16, 16, 16, 16);
+    
     self = [super initWithCollectionViewLayout:layout];
     
     if (self == nil) {
@@ -30,6 +32,7 @@
     }
     
     self.title = @"Photos";
+
     NSDictionary *photosDict = [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Photos" withExtension:@"plist"]];
     self.photos = photosDict[@"photos"];
     
@@ -44,6 +47,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerClass:[ParallaxPhotoCell class] forCellWithReuseIdentifier:@"PhotoCell"];
 }
 
@@ -87,7 +91,7 @@
     // Compute cell size according to image aspect ratio.
     // Cell height must take maximum possible parallax offset into account.
     ParallaxLayout *layout = (ParallaxLayout *)self.collectionViewLayout;
-    CGFloat cellWidth = CGRectGetWidth(self.collectionView.bounds);
+    CGFloat cellWidth = CGRectGetWidth(self.collectionView.bounds) - layout.sectionInset.left - layout.sectionInset.right;
     CGFloat cellHeight = floor(cellWidth / imageWidth * imageHeight) - (2 * layout.maxParallaxOffset);
     return CGSizeMake(cellWidth, cellHeight);
 }

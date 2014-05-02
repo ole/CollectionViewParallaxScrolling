@@ -1,5 +1,5 @@
 //
-//  ParallaxLayout.h
+//  ParallaxFlowLayout.h
 //  ParallaxScrolling
 //
 //  Created by Ole Begemann on 01.05.14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ParallaxLayout : UICollectionViewFlowLayout
+@interface ParallaxFlowLayout : UICollectionViewFlowLayout
 
 @property (nonatomic, readonly) CGFloat maxParallaxOffset;
 

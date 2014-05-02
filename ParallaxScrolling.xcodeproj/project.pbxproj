@@ -20,7 +20,7 @@
 		5DE357E91912843E005CD2F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DE357E71912843E005CD2F2 /* InfoPlist.strings */; };
 		5DE357EB1912843E005CD2F2 /* ParallaxScrollingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357EA1912843E005CD2F2 /* ParallaxScrollingTests.m */; };
 		5DE357F6191284A3005CD2F2 /* PhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357F5191284A3005CD2F2 /* PhotosCollectionViewController.m */; };
-		5DE357F9191284B2005CD2F2 /* ParallaxLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357F8191284B2005CD2F2 /* ParallaxLayout.m */; };
+		5DE357F9191284B2005CD2F2 /* ParallaxFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357F8191284B2005CD2F2 /* ParallaxFlowLayout.m */; };
 		5DE357FC191284D0005CD2F2 /* ParallaxPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357FB191284CF005CD2F2 /* ParallaxPhotoCell.m */; };
 		5DE3581A19128E87005CD2F2 /* 01-mallorca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DE357FF19128E87005CD2F2 /* 01-mallorca.jpg */; };
 		5DE3581B19128E87005CD2F2 /* 02-fishing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DE3580019128E87005CD2F2 /* 02-fishing.jpg */; };
@@ -82,8 +82,8 @@
 		5DE357EA1912843E005CD2F2 /* ParallaxScrollingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxScrollingTests.m; sourceTree = "<group>"; };
 		5DE357F4191284A3005CD2F2 /* PhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionViewController.h; sourceTree = "<group>"; };
 		5DE357F5191284A3005CD2F2 /* PhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewController.m; sourceTree = "<group>"; };
-		5DE357F7191284B2005CD2F2 /* ParallaxLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxLayout.h; sourceTree = "<group>"; };
-		5DE357F8191284B2005CD2F2 /* ParallaxLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxLayout.m; sourceTree = "<group>"; };
+		5DE357F7191284B2005CD2F2 /* ParallaxFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxFlowLayout.h; sourceTree = "<group>"; };
+		5DE357F8191284B2005CD2F2 /* ParallaxFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxFlowLayout.m; sourceTree = "<group>"; };
 		5DE357FA191284CF005CD2F2 /* ParallaxPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxPhotoCell.h; sourceTree = "<group>"; };
 		5DE357FB191284CF005CD2F2 /* ParallaxPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxPhotoCell.m; sourceTree = "<group>"; };
 		5DE357FF19128E87005CD2F2 /* 01-mallorca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "01-mallorca.jpg"; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 				5DE357D51912843E005CD2F2 /* AppDelegate.m */,
 				5DE357F4191284A3005CD2F2 /* PhotosCollectionViewController.h */,
 				5DE357F5191284A3005CD2F2 /* PhotosCollectionViewController.m */,
-				5DE357F7191284B2005CD2F2 /* ParallaxLayout.h */,
-				5DE357F8191284B2005CD2F2 /* ParallaxLayout.m */,
+				5DE357F7191284B2005CD2F2 /* ParallaxFlowLayout.h */,
+				5DE357F8191284B2005CD2F2 /* ParallaxFlowLayout.m */,
 				5DE357FA191284CF005CD2F2 /* ParallaxPhotoCell.h */,
 				5DE357FB191284CF005CD2F2 /* ParallaxPhotoCell.m */,
 				5DE358351912943E005CD2F2 /* ParallaxLayoutAttributes.h */,
@@ -382,7 +382,7 @@
 				5DE358371912943E005CD2F2 /* ParallaxLayoutAttributes.m in Sources */,
 				5DE357D61912843E005CD2F2 /* AppDelegate.m in Sources */,
 				5DE357F6191284A3005CD2F2 /* PhotosCollectionViewController.m in Sources */,
-				5DE357F9191284B2005CD2F2 /* ParallaxLayout.m in Sources */,
+				5DE357F9191284B2005CD2F2 /* ParallaxFlowLayout.m in Sources */,
 				5DE357FC191284D0005CD2F2 /* ParallaxPhotoCell.m in Sources */,
 				5DE357D21912843E005CD2F2 /* main.m in Sources */,
 			);

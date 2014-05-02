@@ -1,17 +1,17 @@
 //
-//  ParallaxLayout.m
+//  ParallaxFlowLayout.m
 //  ParallaxScrolling
 //
 //  Created by Ole Begemann on 01.05.14.
 //  Copyright (c) 2014 Ole Begemann. All rights reserved.
 //
 
-#import "ParallaxLayout.h"
+#import "ParallaxFlowLayout.h"
 #import "ParallaxLayoutAttributes.h"
 
 const CGFloat MaxParallaxOffset = 30.0;
 
-@implementation ParallaxLayout
+@implementation ParallaxFlowLayout
 
 + (Class)layoutAttributesClass
 {

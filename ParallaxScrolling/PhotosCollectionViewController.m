@@ -7,7 +7,7 @@
 //
 
 #import "PhotosCollectionViewController.h"
-#import "ParallaxLayout.h"
+#import "ParallaxFlowLayout.h"
 #import "ParallaxPhotoCell.h"
 
 @interface PhotosCollectionViewController () <UICollectionViewDelegateFlowLayout>
@@ -21,7 +21,7 @@
 
 - (id)init
 {
-    ParallaxLayout *layout = [[ParallaxLayout alloc] init];
+    ParallaxFlowLayout *layout = [[ParallaxFlowLayout alloc] init];
     layout.minimumLineSpacing = 16;
     layout.sectionInset = UIEdgeInsetsMake(16, 16, 16, 16);
     
@@ -74,7 +74,7 @@
 
     // Pass the maximum parallax offset to the cell.
     // The cell needs this information to configure the constraints for its image view.
-    ParallaxLayout *layout = (ParallaxLayout *)self.collectionViewLayout;
+    ParallaxFlowLayout *layout = (ParallaxFlowLayout *)self.collectionViewLayout;
     cell.maxParallaxOffset = layout.maxParallaxOffset;
     
     return cell;
@@ -90,7 +90,7 @@
     
     // Compute cell size according to image aspect ratio.
     // Cell height must take maximum possible parallax offset into account.
-    ParallaxLayout *layout = (ParallaxLayout *)self.collectionViewLayout;
+    ParallaxFlowLayout *layout = (ParallaxFlowLayout *)self.collectionViewLayout;
     CGFloat cellWidth = CGRectGetWidth(self.collectionView.bounds) - layout.sectionInset.left - layout.sectionInset.right;
     CGFloat cellHeight = floor(cellWidth / imageWidth * imageHeight) - (2 * layout.maxParallaxOffset);
     return CGSizeMake(cellWidth, cellHeight);

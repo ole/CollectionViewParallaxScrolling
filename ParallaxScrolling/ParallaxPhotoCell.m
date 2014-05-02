@@ -11,11 +11,11 @@
 
 @interface ParallaxPhotoCell ()
 
-@property (nonatomic) BOOL didSetupConstraints;
 @property (nonatomic, strong) NSLayoutConstraint *imageViewHeightConstraint;
 @property (nonatomic, strong) NSLayoutConstraint *imageViewCenterYConstraint;
 
 @end
+
 
 @implementation ParallaxPhotoCell
 
@@ -42,25 +42,24 @@
     [self.contentView addSubview:_imageView];
 }
 
+- (void)setupConstraints
+{
+    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    // Horizontal constraints for image view
+    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeft multiplier:1 constant:0]];
+    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeRight multiplier:1 constant:0]];
+    
+    // Vertical constraints for image view
+    self.imageViewHeightConstraint = [NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeHeight multiplier:1 constant:0];
+    self.imageViewCenterYConstraint = [NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
+    [self.contentView addConstraint:self.imageViewHeightConstraint];
+    [self.contentView addConstraint:self.imageViewCenterYConstraint];
+}
+
 - (void)updateConstraints
 {
     [super updateConstraints];
-    
-    if (!self.didSetupConstraints) {
-        self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
-
-        // Horizontal constraints for image view
-        [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeft multiplier:1 constant:0]];
-        [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeRight multiplier:1 constant:0]];
-        
-        // Vertical constraints for image view
-        self.imageViewHeightConstraint = [NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeHeight multiplier:1 constant:0];
-        self.imageViewCenterYConstraint = [NSLayoutConstraint constraintWithItem:self.imageView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
-        [self.contentView addConstraint:self.imageViewHeightConstraint];
-        [self.contentView addConstraint:self.imageViewCenterYConstraint];
-        
-        self.didSetupConstraints = YES;
-    }
     
     // Make sure image view is tall enough to cover maxParallaxOffset in both directions
     self.imageViewHeightConstraint.constant = 2 * self.maxParallaxOffset;

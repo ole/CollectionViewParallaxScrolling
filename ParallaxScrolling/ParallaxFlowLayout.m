@@ -32,7 +32,9 @@ static const CGFloat MaxParallaxOffset = 30.0;
 {
     NSArray *layoutAttributesArray = [super layoutAttributesForElementsInRect:rect];
     for (ParallaxLayoutAttributes *layoutAttributes in layoutAttributesArray) {
-        layoutAttributes.parallaxOffset = [self parallaxOffsetForLayoutAttributes:layoutAttributes];
+        if (layoutAttributes.representedElementCategory == UICollectionElementCategoryCell) {
+            layoutAttributes.parallaxOffset = [self parallaxOffsetForLayoutAttributes:layoutAttributes];
+        }
     }
     return layoutAttributesArray;
 }

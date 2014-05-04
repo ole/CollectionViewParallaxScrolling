@@ -20,6 +20,10 @@
 
 - (BOOL)isEqual:(id)object
 {
+    if (![object isKindOfClass:[ParallaxLayoutAttributes class]]) {
+        return NO;
+    }
+
     ParallaxLayoutAttributes *otherObject = object;
     if (!CGPointEqualToPoint(self.parallaxOffset, otherObject.parallaxOffset)) {
         return NO;

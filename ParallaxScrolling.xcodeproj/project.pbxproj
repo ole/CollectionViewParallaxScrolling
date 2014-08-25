@@ -14,11 +14,6 @@
 		5DE357D21912843E005CD2F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357D11912843E005CD2F2 /* main.m */; };
 		5DE357D61912843E005CD2F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357D51912843E005CD2F2 /* AppDelegate.m */; };
 		5DE357D81912843E005CD2F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DE357D71912843E005CD2F2 /* Images.xcassets */; };
-		5DE357DF1912843E005CD2F2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE357DE1912843E005CD2F2 /* XCTest.framework */; };
-		5DE357E01912843E005CD2F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE357C51912843E005CD2F2 /* Foundation.framework */; };
-		5DE357E11912843E005CD2F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE357C91912843E005CD2F2 /* UIKit.framework */; };
-		5DE357E91912843E005CD2F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DE357E71912843E005CD2F2 /* InfoPlist.strings */; };
-		5DE357EB1912843E005CD2F2 /* ParallaxScrollingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357EA1912843E005CD2F2 /* ParallaxScrollingTests.m */; };
 		5DE357F6191284A3005CD2F2 /* PhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357F5191284A3005CD2F2 /* PhotosCollectionViewController.m */; };
 		5DE357F9191284B2005CD2F2 /* ParallaxFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357F8191284B2005CD2F2 /* ParallaxFlowLayout.m */; };
 		5DE357FC191284D0005CD2F2 /* ParallaxPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE357FB191284CF005CD2F2 /* ParallaxPhotoCell.m */; };
@@ -53,16 +48,6 @@
 		5DE3583919129913005CD2F2 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DE3583819129913005CD2F2 /* Photos.plist */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5DE357E21912843E005CD2F2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5DE357BA1912843E005CD2F2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5DE357C11912843E005CD2F2;
-			remoteInfo = ParallaxScrolling;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		5DE357C21912843E005CD2F2 /* ParallaxScrolling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxScrolling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE357C51912843E005CD2F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -75,11 +60,7 @@
 		5DE357D41912843E005CD2F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5DE357D51912843E005CD2F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5DE357D71912843E005CD2F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5DE357DD1912843E005CD2F2 /* ParallaxScrollingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParallaxScrollingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE357DE1912843E005CD2F2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		5DE357E61912843E005CD2F2 /* ParallaxScrollingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParallaxScrollingTests-Info.plist"; sourceTree = "<group>"; };
-		5DE357E81912843E005CD2F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5DE357EA1912843E005CD2F2 /* ParallaxScrollingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxScrollingTests.m; sourceTree = "<group>"; };
 		5DE357F4191284A3005CD2F2 /* PhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionViewController.h; sourceTree = "<group>"; };
 		5DE357F5191284A3005CD2F2 /* PhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewController.m; sourceTree = "<group>"; };
 		5DE357F7191284B2005CD2F2 /* ParallaxFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxFlowLayout.h; sourceTree = "<group>"; };
@@ -129,16 +110,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5DE357DA1912843E005CD2F2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5DE357DF1912843E005CD2F2 /* XCTest.framework in Frameworks */,
-				5DE357E11912843E005CD2F2 /* UIKit.framework in Frameworks */,
-				5DE357E01912843E005CD2F2 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -146,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				5DE357CB1912843E005CD2F2 /* ParallaxScrolling */,
-				5DE357E41912843E005CD2F2 /* ParallaxScrollingTests */,
 				5DE357C41912843E005CD2F2 /* Frameworks */,
 				5DE357C31912843E005CD2F2 /* Products */,
 			);
@@ -156,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				5DE357C21912843E005CD2F2 /* ParallaxScrolling.app */,
-				5DE357DD1912843E005CD2F2 /* ParallaxScrollingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,24 +168,6 @@
 				5DE357CE1912843E005CD2F2 /* InfoPlist.strings */,
 				5DE357D11912843E005CD2F2 /* main.m */,
 				5DE357D31912843E005CD2F2 /* ParallaxScrolling-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5DE357E41912843E005CD2F2 /* ParallaxScrollingTests */ = {
-			isa = PBXGroup;
-			children = (
-				5DE357EA1912843E005CD2F2 /* ParallaxScrollingTests.m */,
-				5DE357E51912843E005CD2F2 /* Supporting Files */,
-			);
-			path = ParallaxScrollingTests;
-			sourceTree = "<group>";
-		};
-		5DE357E51912843E005CD2F2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5DE357E61912843E005CD2F2 /* ParallaxScrollingTests-Info.plist */,
-				5DE357E71912843E005CD2F2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -276,24 +227,6 @@
 			productReference = 5DE357C21912843E005CD2F2 /* ParallaxScrolling.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5DE357DC1912843E005CD2F2 /* ParallaxScrollingTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5DE357F11912843E005CD2F2 /* Build configuration list for PBXNativeTarget "ParallaxScrollingTests" */;
-			buildPhases = (
-				5DE357D91912843E005CD2F2 /* Sources */,
-				5DE357DA1912843E005CD2F2 /* Frameworks */,
-				5DE357DB1912843E005CD2F2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5DE357E31912843E005CD2F2 /* PBXTargetDependency */,
-			);
-			name = ParallaxScrollingTests;
-			productName = ParallaxScrollingTests;
-			productReference = 5DE357DD1912843E005CD2F2 /* ParallaxScrollingTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -302,11 +235,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Ole Begemann";
-				TargetAttributes = {
-					5DE357DC1912843E005CD2F2 = {
-						TestTargetID = 5DE357C11912843E005CD2F2;
-					};
-				};
 			};
 			buildConfigurationList = 5DE357BD1912843E005CD2F2 /* Build configuration list for PBXProject "ParallaxScrolling" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -321,7 +249,6 @@
 			projectRoot = "";
 			targets = (
 				5DE357C11912843E005CD2F2 /* ParallaxScrolling */,
-				5DE357DC1912843E005CD2F2 /* ParallaxScrollingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -364,14 +291,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5DE357DB1912843E005CD2F2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5DE357E91912843E005CD2F2 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -388,37 +307,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5DE357D91912843E005CD2F2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5DE357EB1912843E005CD2F2 /* ParallaxScrollingTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5DE357E31912843E005CD2F2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5DE357C11912843E005CD2F2 /* ParallaxScrolling */;
-			targetProxy = 5DE357E21912843E005CD2F2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5DE357CE1912843E005CD2F2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5DE357CF1912843E005CD2F2 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5DE357E71912843E005CD2F2 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5DE357E81912843E005CD2F2 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -522,46 +417,6 @@
 			};
 			name = Release;
 		};
-		5DE357F21912843E005CD2F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ParallaxScrolling.app/ParallaxScrolling";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ParallaxScrolling/ParallaxScrolling-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ParallaxScrollingTests/ParallaxScrollingTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		5DE357F31912843E005CD2F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ParallaxScrolling.app/ParallaxScrolling";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ParallaxScrolling/ParallaxScrolling-Prefix.pch";
-				INFOPLIST_FILE = "ParallaxScrollingTests/ParallaxScrollingTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,15 +434,6 @@
 			buildConfigurations = (
 				5DE357EF1912843E005CD2F2 /* Debug */,
 				5DE357F01912843E005CD2F2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5DE357F11912843E005CD2F2 /* Build configuration list for PBXNativeTarget "ParallaxScrollingTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5DE357F21912843E005CD2F2 /* Debug */,
-				5DE357F31912843E005CD2F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
